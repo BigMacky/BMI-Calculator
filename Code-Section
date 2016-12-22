@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class BMI_Calc
+{
+	private static Scanner input;
+	public static void main (String args[])
+	{
+		double weight, height, BMI;
+		input = new Scanner(System.in);
+		
+		System.out.print("Please enter your height in meters: ");
+		height = input.nextFloat();
+		System.out.print("Now, please enter your weight in kilograms: ");
+		weight = input.nextFloat();
+		BMI = weight / Math.pow(height, 2.0);
+		System.out.println("\nYour Body Mass Index(BMI) is: " + BMI);
+		System.out.println("\nBMI VALUES"+"\nUnderweight: \tless than 18.5"+"\nNormal: \tbetween 18.5 and 24.9"+"\nOverweight: \tbetween 25 and 29.9"+"\nObese: \t\t30 or greater");
+	}
+}
